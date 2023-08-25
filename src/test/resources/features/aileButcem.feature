@@ -7,6 +7,5 @@ Feature: Kullanici aile butcem uygulamasindaki fonksiyonlari test eder
     * "mail" ve "password" "Giriş Yap" bilgilerini girerek kullanici bilgileriyle giris yapin
     * uygulamaya kullanici bilgileriyle giris yapildigini dogrulayin
     * sol kisimdaki menuden "Hesabım" bolumune gidin
-    * hesabim sayfasindaki bilgileri degistirerek degisikleri kaydedin
-    * ardindan degisiklerin yapildigini dogrulayin
+    * hesabim sayfasindaki bilgileri degistirerek "T116" "Appium" "Istanbul" "30" "QA Tester" degisikleri kaydedin "Kaydet"
     * Kullanici uygulamayi kapatir

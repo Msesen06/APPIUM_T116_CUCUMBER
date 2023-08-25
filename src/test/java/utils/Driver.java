@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
     private static AndroidDriver appiumDriver;
-    static final String TELEFONADI="Pixel 2";
+    static final String TELEFONADI="Pixel";
     static final String ANDROIDVERSION="10.0";
     static final String PLATFORM="Android";
     static final String OTOMASYON_ISMI="UiAutomator2";
@@ -30,6 +30,7 @@ public class Driver {
             caps.setCapability("appPackage",appPackage); // Hangi uygulama uzerinde calismak istiyorsak apk infodan o uygulamanin degerini aliyoruz
             caps.setCapability("appActivity",appActivity); // Uygulamayi actiktan sonra hangi sayfadan baslayacagimizi orn; Anasayfa, Profil, vb
             caps.setCapability(MobileCapabilityType.NO_RESET,false);
+
             // true uygulama sifirlanmiyor onceki adimlari muhafaza ediyor
             //false ise her test baslangicinda uygulamayi sifirliyor ve uygulama en bastan basliyor
             if (ConfigReader.getProperty("platformName").equals("Android")) {
@@ -56,9 +57,12 @@ public class Driver {
             caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, ANDROIDVERSION);
             caps.setCapability(MobileCapabilityType.PLATFORM_NAME, PLATFORM);
             caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, OTOMASYON_ISMI);
-            caps.setCapability("appPackage","appPackage"); // Hangi uygulama uzerinde calismak istiyorsak apk infodan o uygulamanin degerini aliyoruz
-            caps.setCapability("appActivity","appActivity"); // Uygulamayi actiktan sonra hangi sayfadan baslayacagimizi orn; Anasayfa, Profil, vb
+            caps.setCapability("appPackage","com.ailebutcem"); // Hangi uygulama uzerinde calismak istiyorsak apk infodan o uygulamanin degerini aliyoruz
+            caps.setCapability("appActivity","com.ailebutcem.MainActivity"); // Uygulamayi actiktan sonra hangi sayfadan baslayacagimizi orn; Anasayfa, Profil, vb
+
             caps.setCapability(MobileCapabilityType.NO_RESET,false);
+            //caps.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome");
+            //caps.setCapability("chromedriverExecutable","C:\\Users\\HP\\Desktop\\APPIUM_T116_CUCUMBER\\driver\\chromedriver.exe");
             // true uygulama sifirlanmiyor onceki adimlari muhafaza ediyor
             //false ise her test baslangicinda uygulamayi sifirliyor ve uygulama en bastan basliyor
             if (ConfigReader.getProperty("platformName").equals("Android")) {

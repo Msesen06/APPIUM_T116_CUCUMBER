@@ -34,8 +34,6 @@ public class apkYukleme {
     @Given("Kullanici yukleme yapmak istedigi {string} {string} {string} {string} {string} apk dosyasini belirleyerek yukleme yapar")
     public void kullanici_yukleme_yapmak_istedigi_apk_dosyasini_belirleyerek_yukleme_yapar(String cihazIsmi, String platformVersion, String platformName, String automationName, String apk) throws MalformedURLException {
 
-
-
         DesiredCapabilities capabilities=new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,cihazIsmi);
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
